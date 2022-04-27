@@ -28,5 +28,5 @@ Was a .net dev,  now a Python dev
 ## "Agenda"
 
 * Overview of Python
-* More intersting bits
+* More interesting bits
 * but... please ask lots of questions as we go.  
