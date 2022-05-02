@@ -1,8 +1,10 @@
+# Which is quickest????
+
+
 # Count number of A's in a string
 import timeit
 from typing import Counter
 
-text = "sdfklasjdfsdjfkdsAsdfjsdjkfAdklfjdsklA"
 text = 'Abcde' * 1000
 
 def version1(text):
@@ -37,14 +39,25 @@ def version5(text):
   cnts = Counter(text)
   return cnts["A"]
 
+
+def version6(text: str):
+  # Count all letter frequences and return just A
+  return text.count("A")
+
 print(version1(text))
 print(version2(text))
 print(version3(text))
 print(version4(text))
 print(version5(text))
+print(version6(text))
 
 print(1,timeit.timeit(lambda: version1(text), number=1000))
 print(2,timeit.timeit(lambda: version2(text), number=1000))
 print(3,timeit.timeit(lambda: version3(text), number=1000))
 print(4,timeit.timeit(lambda: version4(text), number=1000))
 print(5,timeit.timeit(lambda: version5(text), number=1000))
+print(6,timeit.timeit(lambda: version6(text), number=1000))
+
+#but...
+# cd C:\pypy3.8-v7.3.7-win64
+# ./pypy "C:\Personal\PythonTalks\05 Performance 3.py"
