@@ -7,6 +7,7 @@
 #                     Combining strings
 #######################################################################
 
+
 print("Hello World")
 
 
@@ -62,8 +63,8 @@ while n < 110:
 #                         For Loops
 #######################################################################
 
-for n in range(10):   # <- note the :
-  print(n)  # <- note the indentation
+for n in range(10):
+  print(n)  
   print("Next number")
 print("Done")  
 
@@ -97,7 +98,10 @@ for colour in colours:
 letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 # What does mean?
-# for letter in letters[::-1][0:5]:
+# for letter in letters[::-1]
+# 
+# 
+# [0:5]:
 
 for letter in letters[2:5]:
   print(letter)
@@ -121,10 +125,10 @@ for letter in letters[2:5]:
 
 
 # But we calculate letter.upper() twice
-[letter.upper() for letter in letters[::-1] if letter.upper() < 'M']
+[letter.upper() for letter in letters if letter.upper() < 'M']
 
 # := is called the walrus operator
-[l for letter in letters[::-1] if (l := letter.upper()) < 'M']
+[l for letter in letters if (l := letter.upper()) < 'M']
 
 
 
@@ -191,6 +195,7 @@ for s in text:
 print(counts)
 
 # Third attempt
+
 from collections import Counter
 counts = Counter(text)
 counts
@@ -219,7 +224,6 @@ type(add("David","Kevin"))
 #######################################################################
 #                             Classes
 #######################################################################
-
 
 class Car:
   pass                    # <- note the indentation.   Must have a body - hence pass
@@ -323,9 +327,9 @@ print(none_is_blank(name))
 
 # What do we add for the typing hints?  str gives an error
 
-def none_is_blank(text: Optional[str]) -> str:
+def none_is_blank(text: str):
   if text is None:
-    return ""
+    return 1
   else:
     return text
 
@@ -475,7 +479,7 @@ def must_be_positive(func):
   def wrapper(a,b):
     result = func(a,b)
     if result < 0:
-      raise Exception(f"Result of calculation must be positive. {a}-{b} is {result}")
+      raise Exception(f"Result of calculation must be positive. {a} and {b} is {result}")
     return result
   return wrapper
 
@@ -651,3 +655,4 @@ print(h)
 # web flask
 # generators
 # with statements
+
