@@ -30,3 +30,10 @@ Was a .net dev,  now a Python dev
 * Overview of Python
 * More interesting bits
 * but... please ask lots of questions as we go.  
+* level?
+
+## Ways of running Python
+* Install python3 from the Windows Store + VS Code + Python Extension
+* Online Website
+* Start -> cmd -> Python
+* Notebook
