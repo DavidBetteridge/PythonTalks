@@ -1,9 +1,5 @@
-# import file1
-# import file2
-from file1 import which_file
-from file2 import which_file
+import file1
+print(file1.which_file1())
 
-# def which_file():
-#     return "main"
-
-print(which_file())
+from file2 import which_file2
+print(which_file2())

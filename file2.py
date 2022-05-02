@@ -1,6 +1,2 @@
-def which_file():
-    return "file2 " + that_file()
-
-
-def that_file():
-    return "file2a"
+def which_file2():
+    return "function in file 2.py"
